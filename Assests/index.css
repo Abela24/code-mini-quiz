@@ -1,0 +1,68 @@
+
+body{
+    border: 15px black;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border:solid 6px blue;
+    flex-direction: column;
+}
+
+.start{
+/* button size */
+    font-size: medium; 
+    margin-top: 20px;
+    width: 65px;
+    margin-left: 45%;
+    
+    
+}
+#answer-a{
+   
+    padding-left: 100px;
+    padding-top: 25px;
+}
+
+#answer-b{
+   
+    padding-left: 100px;
+    padding-top: 25px;
+}
+
+#answer-c{
+   
+    padding-left: 100px;
+    padding-top: 25px;
+}
+
+#answer-d{
+   
+    padding-left: 100px;
+    padding-top: 25px;
+}
+#questiondiv{
+
+padding-top:25px;
+padding-bottom:15px;
+font-size: large;
+display:flex;
+justify-content: center;
+}
+
+#Timer{
+    margin-left: 82%;
+    border: solid 3px blue;
+    padding: 10px;
+    margin-right: 7%;
+    display:flex;
+    justify-content: center;
+    width: 40px;
+    margin-top: 5px;
+    
+
+
+}
+
