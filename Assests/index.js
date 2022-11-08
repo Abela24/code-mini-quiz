@@ -10,6 +10,7 @@
  var buttonc = document.getElementById("answer-c");
  var buttond = document.getElementById("answer-d");
  var timerEL = document.getElementById("Timer");
+ var savedbutton = document.getElementById("intialsbutton");
  //click calls to start and start quiz
 Startbtn.addEventListener("click",function(){
     console.log ("click");
@@ -41,7 +42,31 @@ var questions = [
         "(d)Hyper Text Markup Leveler",
     ],
     Answer: "(c)Hyper Text MArkup Language"
-     }
+     },
+     {
+     question: "How many data type are there?",
+     //multiple choice options
+     choices: [
+         "(a)11",
+         "(b)8",
+         "(c)4",
+         "(d)6",
+     ],
+ //correct answer
+     Answer:"(b)8"
+ },
+ {
+ question: "How many data type are there?",
+ //multiple choice options
+ choices: [
+     "(a)11",
+     "(b)8",
+     "(c)4",
+     "(d)6",
+ ],
+//correct answer
+ Answer:"(b)8"
+}
 
 ]
 //insital start question on first question
@@ -78,7 +103,8 @@ function startquestions(){
 }
 
 function endquiz(){
-
+    clearInterval(timeid);
+    
 }
 
 function checkanswers(choice){
@@ -90,7 +116,7 @@ function checkanswers(choice){
         alert("that is incorrect");
         time -= 5;
     };
-    if (questionindex === questions.length){
+    if (questionindex === questions.length - 1){
         alert("your score is " + time)
         endquiz();
     }
@@ -101,6 +127,16 @@ function checkanswers(choice){
     }
 
 }
+//saving time and intials to local storage
+//using time as score
+function savedscore(){
+    var intials = document.getElementById("intials").value;
+    localStorage.setItem(time, intials);
+    startquiz();
+    
+}
+
+
 
 buttona.addEventListener("click", function(){
     checkanswers(buttona.textContent);
@@ -113,7 +149,7 @@ buttonb.addEventListener("click", function(){
     checkanswers(buttond.textContent);
 });
 
-
+savedbutton.addEventListener("click", savedscore);
 var score=0;
 
 // for(var i=o; i < questions.length; i++){
