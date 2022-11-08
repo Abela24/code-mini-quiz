@@ -44,7 +44,7 @@ var questions = [
      }
 
 ]
-//insital start question on 0
+//insital start question on first question
 var questionindex = -1;
 var timeid;
 function startquiz (){
@@ -68,6 +68,12 @@ function startquestions(){
     var currentQuestions = questions[questionindex];
     //calling question
     questionEL.textContent = currentQuestions.question;
+    //calling quesions array and choices key inside questions array
+    //redering each choice
+    buttona.textContent = questions[questionindex].choices[0]
+    buttonb.textContent = questions[questionindex].choices[1]
+    buttonc.textContent = questions[questionindex].choices[2]
+    buttond.textContent = questions[questionindex].choices[3]
 
 }
 
@@ -75,6 +81,37 @@ function endquiz(){
 
 }
 
+function checkanswers(choice){
+    var correctanswer = questions[questionindex].Answer
+    if(choice === correctanswer){
+        alert("that is correct");
+    }
+    else {
+        alert("that is incorrect");
+        time -= 5;
+    };
+    if (questionindex === questions.length){
+        alert("your score is " + time)
+        endquiz();
+    }
+    else{
+        questionindex++;
+        startquestions();
+        
+    }
+
+}
+
+buttona.addEventListener("click", function(){
+    checkanswers(buttona.textContent);
+});
+buttonb.addEventListener("click", function(){
+    checkanswers(buttonb.textContent);
+});buttonc.addEventListener("click", function(){
+    checkanswers(buttonc.textContent);
+});buttond.addEventListener("click", function(){
+    checkanswers(buttond.textContent);
+});
 
 
 var score=0;
