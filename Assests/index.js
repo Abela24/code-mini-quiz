@@ -135,6 +135,16 @@ function savedscore(){
     startquiz();
     
 }
+function getscores(){
+    var highscore = localStorage.getItem("time");
+    highscore = JSON.parse(highscore);
+    console.log (highscore)
+    
+  
+    
+}
+var highscorebutton = document.getElementById("highscorebutton");
+highscorebutton.addEventListener("click", getscores);
 
 
 
