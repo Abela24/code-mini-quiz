@@ -44,28 +44,28 @@ var questions = [
     Answer: "(c)Hyper Text MArkup Language"
      },
      {
-     question: "How many data type are there?",
+     question: "arrays in javascript can used to store?",
      //multiple choice options
      choices: [
-         "(a)11",
-         "(b)8",
-         "(c)4",
-         "(d)6",
+         "(a)boolean",
+         "(b)numbers",
+         "(c)string",
+         "(d)all the above",
      ],
  //correct answer
-     Answer:"(b)8"
+     Answer:"(d)all the above"
  },
  {
- question: "How many data type are there?",
+ question: "what does CSS stand for?",
  //multiple choice options
  choices: [
-     "(a)11",
-     "(b)8",
-     "(c)4",
-     "(d)6",
+     "(a)Common Style Sheet",
+     "(b)Computer Style Sheet",
+     "(c)Cascading Style Sheet",
+     "(d)COlorful Style Sheet",
  ],
 //correct answer
- Answer:"(b)8"
+ Answer:"(c)Cascading Style Sheet"
 }
 
 ]

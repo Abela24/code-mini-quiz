@@ -6,9 +6,12 @@ body{
 .container{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     border:solid 6px blue;
     flex-direction: column;
+    background-color: blueviolet;
+    
 }
 
 .start{
@@ -16,32 +19,31 @@ body{
     font-size: medium; 
     margin-top: 20px;
     width: 65px;
-    margin-left: 45%;
+  
     
     
 }
 #answer-a{
-   
-    padding-left: 100px;
-    padding-top: 25px;
+    width: 250px;
+    height: 60px;
 }
 
 #answer-b{
-   
-    padding-left: 100px;
-    padding-top: 25px;
+   width: 250px;
+   height: 60px;
+   margin-top: 4px;
 }
 
 #answer-c{
-   
-    padding-left: 100px;
-    padding-top: 25px;
+   width: 250px;
+    height: 60px;
+    margin-top: 4px;
 }
 
 #answer-d{
-   
-    padding-left: 100px;
-    padding-top: 25px;
+   width: 250px;
+    height: 60px;
+    margin-top: 4px;
 }
 #questiondiv{
 
@@ -61,8 +63,20 @@ justify-content: center;
     justify-content: center;
     width: 40px;
     margin-top: 5px;
+    background-color: whitesmoke;
     
 
 
 }
 
+#highscorebutton{
+    width: 100px;
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+#intials{
+    margin-top: 4px;
+    margin-left: 5px;
+}
